@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Color Anomaly Detection</title>
+</head>
+<body>
+    <h1>Color Anomaly Detection</h1>
+    <div class="container">
+        <div id="upload-section">
+            <h2>Upload Image</h2>
+            <input type="file" id="image-input">
+        </div>
+
+        <div id="controls-section">
+            <h2>Settings</h2>
+            <input type="range" id="sensitivity-slider" min="0" max="100" value="50">
+            <button id="detect-button">Detect Anomalies</button>
+            <label>
+                <input type="checkbox" id="show-coordinates"> Show Coordinates
+            </label>
+        </div>
+    </div>
+
+    <div class="canvas-container">
+        <canvas id="canvas"></canvas>
+    </div>
+
+    <!-- Tooltip for Hover Coordinates -->
+    <div id="tooltip"></div>
+
+    <!-- Detected Anomalies List Below Canvas -->
+    <div id="anomaly-output">
+        <h2>Detected Anomalies</h2>
+        <ul id="coordinates-list"></ul>
+    </div>
+
+    <!-- Popup for Anomaly Details -->
+    <div id="popup">
+        <span id="close-popup" onclick="hidePopup()">&#10006;</span>
+        <p id="popup-content"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
