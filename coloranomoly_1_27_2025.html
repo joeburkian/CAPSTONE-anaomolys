@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Anomaly Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Color Anomaly Detection</h1>
+    <h3>Upload Image</h3>
+    <input type="file" id="image-input">
+    
+    <div>
+        <label for="sensitivity-slider">Adjust Detection Sensitivity</label>
+        <input type="range" id="sensitivity-slider" min="0" max="100" value="50">
+    </div>
+    <button id="detect-button">Detect Yellow Anomalies</button>
+
+    <canvas id="canvas"></canvas>
+
+    <label>
+        <input type="checkbox" id="show-coordinates-hover"> Show Coordinates on Hover
+    </label>
+
+    <div id="anomaly-count"></div>
+    <ul id="coordinates-list"></ul>
+
+    <!-- Info box for displaying color difference data when an anomaly is clicked -->
+    <div id="info-box" class="info-box">
+        <span id="info-box-close" class="info-box-close">&times;</span>
+        <div id="info-box-content"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
